@@ -4,7 +4,7 @@ Welcome to the React.js Practice Repository! This repository is a collection of 
 
 ## Getting Started
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/reactjs-practice.git`
+1. Clone this repository to your local machine using `git clone https://github.com/praju-1/ReactJS.git`
 
 ## Running the Exercises
 
