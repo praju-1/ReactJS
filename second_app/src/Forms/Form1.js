@@ -5,8 +5,11 @@ class Form1 extends Component {
       super(props)
     
       this.state = {
-         UserName : ' '
-      }
+         UserName : ' ',
+         comments : ' ',
+         graduation : 'BE'
+
+      } 
     }
 
     handleUsernameChange = (event)=>{
@@ -14,9 +17,27 @@ class Form1 extends Component {
         UserName : event.target.value
       })
     }
+
+    handleCommentChange = (event)=>{
+      this.setState({
+        comments : event.target.value
+      })
+    }
+
+    handleGrade = (event)=>{
+      this.setState({
+        graduation: event.target.value
+      })
+    }
+
+    handleSubmit= (event)=>{
+      alert(`${this.state.UserName}.${this.state.comments}.${this.state.graduation}`)
+      event.preventDefault()
+    }
   render() {
     return (
      <>
+     <form onSubmit={this.handleSubmit}>
      <div>
      <label>UserName</label>
      <input type='text' value={this.state.UserName} onChange={this.handleUsernameChange}/>
@@ -24,8 +45,27 @@ class Form1 extends Component {
 
      <div>
       <label>Text Area : </label> 
-      <textarea></textarea>
+      <textarea type = "text" value={this.state.comments} onChange={this.handleCommentChange}></textarea>
+     </div><br></br>
+
+     {/* multiple choices */}
+
+     <div>
+      <label>Graduation :: </label>
+      <select value={this.state.graduation} onChange={this.handleGrade}>
+        <option value='BE'>BE</option>
+        <option value='ME'>ME</option>
+        <option value='MCS'>MCS</option>
+        <option value='MCA'>MCA</option>
+        <option value='MTech'>MTech</option>
+        <option value='BTech'>BTech</option>
+      </select>
+     </div><br></br>
+
+     <div>
+      <button type='submit'>Submit</button>
      </div>
+     </form>
      </>
     )
   }
