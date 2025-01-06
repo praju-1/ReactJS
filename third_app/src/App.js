@@ -1,6 +1,6 @@
 import './App.css';
-// import { DataProvider } from './components/contextUseCases/AccesingData/DataContext';
-// import DisplayData from './components/contextUseCases/AccesingData/DisplayData';
+import { DataProvider } from './components/contextUseCases/AccesingData/DataContext';
+import DisplayData from './components/contextUseCases/AccesingData/DisplayData';
 // import HomePage from './components/contextUseCases/Multilingual_support/HomePage';
 // import { LangProvider } from './components/contextUseCases/Multilingual_support/LangContext';
 // import { AuthProvider } from './components/contextUseCases/Authentication/AuthContext';
@@ -55,9 +55,9 @@ function App() {
 
   {/* execution of contextAPI Accesing Data From External Source */}
 
-            {/* <DataProvider>
+            <DataProvider>
               <DisplayData/>
-            </DataProvider> */}
+            </DataProvider>
 
 
           {/* <NavBar/> 
